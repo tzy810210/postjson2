@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    compile 'com.android.support:support-annotations:27.1.1'
+    //依赖
+    implementation 'com.youth.banner:banner:1.4.10'
+    //轮播图
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //recyclerView万能适配器
+    implementation 'com.google.code.gson:gson:2.8.1'
+    //Gson解析
+    compile 'com.android.support:design:26.1.0'
+    //TabLayout组件
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    //圆形头像
+    //图片解析框架
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    //glide图片解析
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    //picasso图片解析
+    //RxJava
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    // Retrofit的gson库字符串库
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.orhanobut:logger:1.8'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'fm.jiecao:jiecaovideoplayer:2.0'
+    //节操
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
+    implementation 'com.yinglan.alphatabs:library:1.0.8'
+    compile 'io.reactivex:rxjava:1.1.6'
+    // Retrofit的rx解析库
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //解决Android3.0以后不能butterknife问题
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    //butterKnife依赖
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.github.baserecycleradapter:library:1.1.0'
+}
